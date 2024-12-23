@@ -3,13 +3,21 @@ import SaveIcon from '@mui/icons-material/Save';
 import React, { useState } from 'react';
 
 const AddTodo = () => {
-    const [task, setTask] = useState<string>("")
+  const [task, setTask] = useState<string>('');
 
-    const handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setTask(e.target.value)
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => setTask(e.target.value);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+  };
 
   return (
     <Box
       component='form'
+      onSubmit={handleSubmit}
       sx={{
         display: { xs: 'block', sm: 'flex' },
         justifyContent: { xs: 'flex-start', sm: 'center' },

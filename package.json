@@ -23,7 +23,7 @@
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
-    "axios": "^1.7.5",
+    "axios": "^1.7.9",
     "bootstrap": "^5.3.3",
     "firebase": "^10.13.1",
     "formik": "^2.4.6",
