@@ -1,10 +1,14 @@
 import Main from './pages/Main';
 import './styles/App.css';
+import { Container } from '@mui/material';
 
 function App() {
-  return <div className='App' >
-  <Main/>
-  </div>;
+  return (
+    <Container>
+    
+      <Main />
+    </Container>
+  );
 }
 
 export default App;
