@@ -2,7 +2,15 @@ import { Box, Button, TextField } from '@mui/material';
 import SaveIcon from '@mui/icons-material/Save';
 import React, { useState } from 'react';
 
-const AddTodo = () => {
+
+interface IAddTodo{
+    addTodo : (task:string) => Promise<void>
+}
+
+
+
+const AddTodo = ({addTodo}:IAddTodo) => {
+
   const [task, setTask] = useState<string>('');
 
   const handleChange = (
@@ -11,6 +19,8 @@ const AddTodo = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    addTodo(task)
+    setTask("")
     
   };
 
@@ -34,6 +44,7 @@ const AddTodo = () => {
           height: { xs: '50px', m: 1 },
         }}
         onChange={handleChange}
+        value={task}
       />
       <Button
         variant='contained'
