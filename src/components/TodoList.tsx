@@ -1,9 +1,10 @@
 import { Grid, Typography } from '@mui/material'
 
+interface ITodolist {
+  todos:ITodoType[]
+}
 
-
-
-const TodoList = ({todos}) => {
+const TodoList: React.FC<ITodolist>  = ({todos}) => {
   return (
     <Grid
       container

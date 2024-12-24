@@ -5,12 +5,12 @@ import AddTodo from '../components/AddTodo';
 import axios from 'axios';
 import TodoList from '../components/TodoList';
 
-interface ITodoType {
-  task: string;
-  isDone: boolean;
-  id: string | number;
-  owner?: string;
-}
+// interface ITodoType {
+//   task: string;
+//   isDone: boolean;
+//   id: string | number;
+//   owner?: string;
+// }
 
 const url = 'https://634ac3fc5df952851418480f.mockapi.io/api/todos';
 
@@ -28,22 +28,12 @@ const Main = () => {
     }
   };
 
-  //* 1. path
-  // const addTodo = async(task:string)=> {
-  //   try {
-  //     await axios.post(url,{task,isDone:false})
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  //* 2. path
   type AddFn = (task: string) => Promise<void>;
 
   const addTodo: AddFn = async (task: string) => {
     try {
       await axios.post(url, { task, isDone: false });
-      getTodos()
+      getTodos();
     } catch (error) {
       console.log(error);
     }
