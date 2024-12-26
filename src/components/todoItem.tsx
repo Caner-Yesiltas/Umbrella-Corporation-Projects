@@ -18,7 +18,7 @@ const TodoItem: FC<ITodoItem> = ({ todo, toggleTodo }) => {
         </IconButton>
       }
     >
-      <ListItemText primary={todo.task} onClick={} />
+      <ListItemText primary={todo.task} />
     </ListItem>
   );
 };

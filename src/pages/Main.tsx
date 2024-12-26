@@ -31,7 +31,7 @@ const Main = () => {
 
   const toggleTodo: ToggleFn = async (todo) => {
     try {
-      await axios.put(`${url}/${todo.id}`,{ ...todo, isDone:!todo.isDone });
+      await axios.put(`${url}/${todo.id}`, { ...todo, isDone: !todo.isDone });
       getTodos();
     } catch (error) {
       console.log(error);
@@ -46,7 +46,7 @@ const Main = () => {
     <Container>
       <Header />
       <AddTodo addTodo={addTodo} />
-      <TodoList todos={todos}  toggleTodo={toggleTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} />
     </Container>
   );
 };

@@ -4,7 +4,7 @@ import '../styles/App.css';
 
 interface ITodolist {
   todos: ITodoType[];
-  toggleTodo: ToggleFn
+  toggleTodo: ToggleFn;
 }
 
 const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
@@ -45,7 +45,9 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
           Testing Phase
         </Typography>
         {inProgressTodos.length ? (
-          inProgressTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+          inProgressTodos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+          ))
         ) : (
           <Typography color='error' my={3}>
             No Testing Phase!
@@ -77,7 +79,9 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
         </Typography>
 
         {completedTodos.length ? (
-          completedTodos.map((todo) => <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo}   />)
+          completedTodos.map((todo) => (
+            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+          ))
         ) : (
           <Typography color='error' mt={3}>
             Project Failed!
