@@ -4,9 +4,10 @@ import '../styles/App.css';
 
 interface ITodolist {
   todos: ITodoType[];
+  toggleTodo: ToggleFn
 }
 
-const TodoList: React.FC<ITodolist> = ({ todos }) => {
+const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
   const inProgressTodos = todos.filter((todo) => !todo.isDone);
   const completedTodos = todos.filter((todo) => todo.isDone);
   return (
@@ -76,7 +77,7 @@ const TodoList: React.FC<ITodolist> = ({ todos }) => {
         </Typography>
 
         {completedTodos.length ? (
-          completedTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+          completedTodos.map((todo) => <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo}   />)
         ) : (
           <Typography color='error' mt={3}>
             Project Failed!

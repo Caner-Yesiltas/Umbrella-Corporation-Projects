@@ -4,3 +4,7 @@ interface ITodoType {
     id: string | number;
     owner?: string;
   }
+
+
+  type AddFn = (task: string) => Promise<void>;
+  type ToggleFn = (todo: ITodoType) => Promise<void>;
