@@ -1,3 +1,13 @@
+
+body{
+  background-image: url(/assets/resident-evil-afterlife-movie-image-milla-jovovich-31.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+  padding-top: 20vh;
+
+}
 /* Scrollbar customization for Webkit-based browsers (Chrome, Safari) */
 /* General scrollbar properties */
 .myscrooll::-webkit-scrollbar {

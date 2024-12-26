@@ -27,28 +27,31 @@ const AddTodo = ({ addTodo }: IAddTodo) => {
         display: { xs: 'block', sm: 'flex' },
         justifyContent: { xs: 'flex-start', sm: 'center' },
         m: { xs: 1, sm: 'auto' },
-        height: { xs: '7.5rem' },
-        sm: '5rem',
+        height: { xs: '5.5rem', sm: '5rem' }  
       }}
     >
       <TextField
-        variant='outlined'
-        color='success'
-        sx={{
-          minWidth: { xs: '100', sm: '50%' },
-          height: { xs: '50px', m: 1 },
-        }}
-        onChange={handleChange}
-        value={task}
-      />
+  variant='outlined'
+  color='success'
+  size="small"  // small, medium veya 
+  sx={{
+    minWidth: { xs: '100', sm: '30%' },
+  }}
+  // veya
+  inputProps={{ 
+    style: { height: "1rem" }
+  }}
+  onChange={handleChange}
+  value={task}
+/>
       <Button
         variant='contained'
          type="submit"
         endIcon={<SaveIcon />}
-        color='primary'
+        color='warning'
         sx={{
-          minWidth: { xs: '100', sm: '15%' },
-          height: { xs: '55px', m: 1 },
+          minWidth: { xs: '100', sm: '10%' },
+          height: { xs: '35px', m: 1 },
           
         }}
       >

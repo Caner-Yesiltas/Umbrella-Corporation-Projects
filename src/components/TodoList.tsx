@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import TodoItem from './todoItem';
-import '../styles/App.css'
+import '../styles/App.css';
 
 interface ITodolist {
   todos: ITodoType[];
@@ -35,16 +35,21 @@ const TodoList: React.FC<ITodolist> = ({ todos }) => {
           borderRadius: '0.5rem',
         }}
       >
-       <Typography className='title' color='secondary' align='center' variant='h4'>
-  In Progress Todos
-</Typography>
-{inProgressTodos.length ? (
-  inProgressTodos.map((todo) => (
-    <TodoItem key={todo.id} todo={todo} />
-  ))
-) : (
-  <Typography color='error' my={3}>No InProgress Todos!</Typography>
-)}
+        <Typography
+          className='title'
+          color='secondary'
+          align='center'
+          variant='h4'
+        >
+          Testing Phase
+        </Typography>
+        {inProgressTodos.length ? (
+          inProgressTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+        ) : (
+          <Typography color='error' my={3}>
+            No Testing Phase!
+          </Typography>
+        )}
       </Grid>
       <Grid
         item
@@ -61,13 +66,22 @@ const TodoList: React.FC<ITodolist> = ({ todos }) => {
           borderRadius: '0.5rem',
         }}
       >
-       <Typography className='title' sx={{color:"green"}} align='center' variant='h4'>Completed Todos</Typography>
+        <Typography
+          className='title'
+          sx={{ color: 'green' }}
+          align='center'
+          variant='h4'
+        >
+          Project Success
+        </Typography>
 
-{
-  completedTodos.length ? completedTodos.map(todo => <TodoItem key={todo.id} todo={todo} />) : 
-
-  <Typography color='error' mt={3}>No Completed Todos!</Typography>
-}
+        {completedTodos.length ? (
+          completedTodos.map((todo) => <TodoItem key={todo.id} todo={todo} />)
+        ) : (
+          <Typography color='error' mt={3}>
+            Project Failed!
+          </Typography>
+        )}
       </Grid>
     </Grid>
   );
