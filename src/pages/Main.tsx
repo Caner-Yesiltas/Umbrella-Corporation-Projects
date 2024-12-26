@@ -5,17 +5,9 @@ import AddTodo from '../components/AddTodo';
 import axios from 'axios';
 import TodoList from '../components/TodoList';
 
-// interface ITodoType {
-//   task: string;
-//   isDone: boolean;
-//   id: string | number;
-//   owner?: string;
-// }
-
 const url = 'https://634ac3fc5df952851418480f.mockapi.io/api/todos';
 
 const Main = () => {
-  // const [todos, setTodos] = useState([] as ITodoType[])
   const [todos, setTodos] = useState<ITodoType[]>([]);
   console.log(todos);
 
