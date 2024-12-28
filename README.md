@@ -1,30 +1,37 @@
 <div align="center">
   <h1>☔ Umbrella Corporation Project Management</h1>
-  <p>A Resident Evil themed task management application</p>
+  
+  <h3>
+    👉 <a href="https://umbrella-corporation-projects-2dbd.vercel.app/">Live Demo</a> 👈
+  </h3>
 </div>
-📌 About The Project
+
+## 🚀 About The Project
+
 Umbrella Corporation Project Management is a stylish task tracking application developed with React and TypeScript. The application features a Resident Evil theme, complete with custom styling and themed notifications. Users can manage projects through an intuitive interface that separates tasks into "Testing Phase" and "Project Success" categories.
-✨ Key Features
 
-🧪 Testing Phase and Project Success task categories
-🦠 Resident Evil themed interface and notifications
-🔄 Real-time task status updates
-🎯 Task completion tracking
-🗑️ Task deletion with themed notifications
-📱 Fully responsive Material-UI design
-💉 Custom scrollbar styling for different task states
+### ✨ Key Features
 
-🛠️ Built With
+• 🧪 Testing Phase and Project Success task categories  
+• 🦠 Resident Evil themed interface and notifications  
+• 🔄 Real-time task status updates  
+• 🎯 Task completion tracking  
+• 🗑️ Task deletion with themed notifications  
+• 📱 Fully responsive Material-UI design  
+• 💉 Custom scrollbar styling for different task states
 
-React
-TypeScript
-Material-UI
-Axios
-SweetAlert2
-MockAPI
+### 🛠️ Built With
 
-🚀 Getting Started
-bashCopy# Clone the repository
+• [React](https://reactjs.org/)  
+• [TypeScript](https://www.typescriptlang.org/)  
+• [Material-UI](https://mui.com/)  
+• [Axios](https://axios-http.com/)  
+• [SweetAlert2](https://sweetalert2.github.io/)  
+• [MockAPI](https://mockapi.io/)
+
+## 💻 Getting Started
+```bash
+# Clone the repository
 git clone https://github.com/caneryesiltas/umbrella-corporation-projects.git
 
 # Navigate to project directory
@@ -35,10 +42,11 @@ yarn install
 
 # Start the development server
 yarn start
+```
 
- ```
-💻 Project Structure
-Copysrc/
+## 📁 Project Structure
+```
+src/
 ├── components/         # UI components
 │   ├── AddTodo/       # Task addition component
 │   ├── Header/        # Application header
@@ -51,50 +59,43 @@ Copysrc/
 ├── styles/            # CSS styling
 │   └── App.css        # Global styles
 └── types.d.ts         # TypeScript definitions
-🔍 Core Functionality
- ```
+```
 
-Task Management
+## 🔍 Core Features
 
-Add new tasks to Testing Phase
-Track task completion status
-Delete completed tasks
-Custom notifications for task actions
+### Task Management
+• Add new tasks to Testing Phase  
+• Track task completion status  
+• Delete completed tasks  
+• Custom notifications for task actions
 
-Styling & Theme
+### Styling & Theme
+• Resident Evil inspired background  
+• Custom scrollbar styling  
+• Responsive Material-UI components  
+• Dynamic task status indicators
 
-Resident Evil inspired background
-Custom scrollbar styling
-Responsive Material-UI components
-Dynamic task status indicators
+### API Integration
+• RESTful API operations with MockAPI  
+• Asynchronous task management  
+• Real-time data synchronization
 
-API Integration
+## 📱 Responsive Design
+• Mobile-first approach  
+• Flexible grid system  
+• Adaptive component layouts  
+• Cross-device compatibility
 
-RESTful API operations with MockAPI
-Asynchronous task management
-Real-time data synchronization
+## 📝 License
 
-📱 Responsive Design
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Mobile-first approach
-Flexible grid system
-Adaptive component layouts
-Cross-device compatibility
+## 📫 Contact
 
-🎨 Custom Styling
+Caner Yesiltas - [caneryesiltas1@gmail.com](mailto:caneryesiltas1@gmail.com)
 
-Themed scrollbars
-Task status indicators
-Custom background image
-Material-UI theme customization
+Project Link: [https://umbrella-corporation-projects-2dbd.vercel.app/](https://umbrella-corporation-projects-2dbd.vercel.app/)
 
-📫 Contact
-Caner Yesiltas - caneryesiltas1@gmail.com
-
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Project Link: [https://contact-app-bice-tau.vercel.app/](https://contact-app-bice-tau.vercel.app/)
 
 <div align="center">
   Made with ☔ by Caner Yesiltas
