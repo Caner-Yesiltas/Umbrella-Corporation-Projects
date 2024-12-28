@@ -6,6 +6,11 @@
   </h3>
 </div>
 
+<div align="center">
+  <img src="/assets/Umbrella-Projects.gif" alt="Contact App Demo" width="800"/>
+</div>
+
+
 ## 🚀 About The Project
 
 Umbrella Corporation Project Management is a stylish task tracking application developed with React and TypeScript. The application features a Resident Evil theme, complete with custom styling and themed notifications. Users can manage projects through an intuitive interface that separates tasks into "Testing Phase" and "Project Success" categories.
