@@ -1,5 +1,5 @@
 import { Grid, Typography } from '@mui/material';
-import TodoItem from './TodoItem';
+import TodoItem from './todoItem';
 import '../styles/App.css';
 
 interface ITodolist {
