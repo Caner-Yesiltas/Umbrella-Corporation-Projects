@@ -1,11 +1,11 @@
 import { Grid, Typography } from '@mui/material';
-import TodoItem from './TodoItem';
+import TodoItem from '../components/TodoItem';
 import '../styles/App.css';
 
 interface ITodolist {
   todos: ITodoType[];
   toggleTodo: ToggleFn;
-  deleteTodo:DeleteFn;
+  deleteTodo: DeleteFn;
 }
 
 const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
@@ -35,8 +35,8 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
           overflow: 'auto',
           border: '1px solid purple',
           borderRadius: '0.5rem',
-          color: 'green', 
-          fontWeight:"bold",
+          color: 'green',
+          fontWeight: 'bold',
         }}
       >
         <Typography
@@ -44,13 +44,17 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
           color='secondary'
           align='center'
           variant='h4'
-          
         >
           Testing Phase
         </Typography>
         {inProgressTodos.length ? (
           inProgressTodos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+            />
           ))
         ) : (
           <Typography color='error' my={3}>
@@ -71,8 +75,8 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
           overflow: 'auto',
           border: '1px solid purple',
           borderRadius: '0.5rem',
-          color: 'purple', 
-          fontWeight:"bold",
+          color: 'purple',
+          fontWeight: 'bold',
         }}
       >
         <Typography
@@ -86,7 +90,12 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
 
         {completedTodos.length ? (
           completedTodos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              toggleTodo={toggleTodo}
+              deleteTodo={deleteTodo}
+            />
           ))
         ) : (
           <Typography color='error' mt={3}>

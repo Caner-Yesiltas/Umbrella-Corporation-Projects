@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+<div align="center">
+  <h1>☔ Umbrella Corporation Project Management</h1>
+  <p>A Resident Evil themed task management application</p>
+</div>
+📌 About The Project
+Umbrella Corporation Project Management is a stylish task tracking application developed with React and TypeScript. The application features a Resident Evil theme, complete with custom styling and themed notifications. Users can manage projects through an intuitive interface that separates tasks into "Testing Phase" and "Project Success" categories.
+✨ Key Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🧪 Testing Phase and Project Success task categories
+🦠 Resident Evil themed interface and notifications
+🔄 Real-time task status updates
+🎯 Task completion tracking
+🗑️ Task deletion with themed notifications
+📱 Fully responsive Material-UI design
+💉 Custom scrollbar styling for different task states
 
-## Available Scripts
+🛠️ Built With
 
-In the project directory, you can run:
+React
+TypeScript
+Material-UI
+Axios
+SweetAlert2
+MockAPI
 
-### `yarn start`
+🚀 Getting Started
+bashCopy# Clone the repository
+git clone https://github.com/caneryesiltas/umbrella-corporation-projects.git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Navigate to project directory
+cd umbrella-corporation-projects
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Install dependencies
+yarn install
 
-### `yarn test`
+# Start the development server
+yarn start
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ```
+💻 Project Structure
+Copysrc/
+├── components/         # UI components
+│   ├── AddTodo/       # Task addition component
+│   ├── Header/        # Application header
+│   ├── TodoItem/      # Individual task item
+│   └── TodoList/      # Task list container
+├── helper/            # Utility functions
+│   └── sweetalert.ts  # Custom notifications
+├── pages/             # Page components
+│   └── Main.tsx       # Main application page
+├── styles/            # CSS styling
+│   └── App.css        # Global styles
+└── types.d.ts         # TypeScript definitions
+🔍 Core Functionality
+ ```
 
-### `yarn build`
+Task Management
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Add new tasks to Testing Phase
+Track task completion status
+Delete completed tasks
+Custom notifications for task actions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Styling & Theme
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Resident Evil inspired background
+Custom scrollbar styling
+Responsive Material-UI components
+Dynamic task status indicators
 
-### `yarn eject`
+API Integration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+RESTful API operations with MockAPI
+Asynchronous task management
+Real-time data synchronization
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📱 Responsive Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Mobile-first approach
+Flexible grid system
+Adaptive component layouts
+Cross-device compatibility
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🎨 Custom Styling
 
-## Learn More
+Themed scrollbars
+Task status indicators
+Custom background image
+Material-UI theme customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📫 Contact
+Caner Yesiltas - caneryesiltas1@gmail.com
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📝 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### Code Splitting
+Project Link: [https://contact-app-bice-tau.vercel.app/](https://contact-app-bice-tau.vercel.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  Made with ☔ by Caner Yesiltas
+</div>
