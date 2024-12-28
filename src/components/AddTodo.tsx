@@ -9,9 +9,7 @@ interface IAddTodo {
 const AddTodo = ({ addTodo }: IAddTodo) => {
   const [task, setTask] = useState<string>('');
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => setTask(e.target.value);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => setTask(e.target.value);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,8 +48,8 @@ const AddTodo = ({ addTodo }: IAddTodo) => {
         endIcon={<SaveIcon />}
         color='warning'
         sx={{
-          minWidth: { xs: '100', sm: '10%' },
-          height: { xs: '35px', m: 1 },
+          minWidth: { xs: '80%', sm: '10%' },
+          height: { xs: '32px', m: 1 },
         }}
       >
         Send

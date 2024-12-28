@@ -5,20 +5,23 @@ import React, { FC } from 'react';
 interface ITodoItem {
   todo: ITodoType;
   toggleTodo: ToggleFn;
+  deleteTodo: DeleteFn;
 }
 
-const TodoItem: FC<ITodoItem> = ({ todo, toggleTodo }) => {
+const TodoItem: FC<ITodoItem> = ({ todo, toggleTodo, deleteTodo }) => {
   return (
     <ListItem
       disableGutters
-      sx={{ padding: '1rem', cursor: 'pointer' }}
+      sx={{ padding: '1rem', cursor: 'pointer', backgroundColor: 'rgba(47, 112, 219, 0.5)',  
+       }}
+      
       secondaryAction={
         <IconButton aria-label='comment'>
-          <DeleteOutline sx={{ '&:hover': { color: 'red' } }} />
+          <DeleteOutline sx={{ '&:hover': { color: 'red' } }}  onClick={()=>deleteTodo(todo.id)}   />
         </IconButton>
       }
     >
-      <ListItemText primary={todo.task} />
+      <ListItemText primary={todo.task}  onClick={()=>toggleTodo(todo)}  />
     </ListItem>
   );
 };

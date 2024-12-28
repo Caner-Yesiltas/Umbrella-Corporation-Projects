@@ -1,13 +1,14 @@
 import { Grid, Typography } from '@mui/material';
-import TodoItem from './todoItem';
+import TodoItem from './TodoItem';
 import '../styles/App.css';
 
 interface ITodolist {
   todos: ITodoType[];
   toggleTodo: ToggleFn;
+  deleteTodo:DeleteFn;
 }
 
-const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
+const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo, deleteTodo }) => {
   const inProgressTodos = todos.filter((todo) => !todo.isDone);
   const completedTodos = todos.filter((todo) => todo.isDone);
   return (
@@ -34,6 +35,8 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
           overflow: 'auto',
           border: '1px solid purple',
           borderRadius: '0.5rem',
+          color: 'green', 
+          fontWeight:"bold",
         }}
       >
         <Typography
@@ -41,12 +44,13 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
           color='secondary'
           align='center'
           variant='h4'
+          
         >
           Testing Phase
         </Typography>
         {inProgressTodos.length ? (
           inProgressTodos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo}/>
           ))
         ) : (
           <Typography color='error' my={3}>
@@ -67,6 +71,8 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
           overflow: 'auto',
           border: '1px solid purple',
           borderRadius: '0.5rem',
+          color: 'purple', 
+          fontWeight:"bold",
         }}
       >
         <Typography
@@ -80,7 +86,7 @@ const TodoList: React.FC<ITodolist> = ({ todos, toggleTodo }) => {
 
         {completedTodos.length ? (
           completedTodos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+            <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
           ))
         ) : (
           <Typography color='error' mt={3}>

@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import AddTodo from '../components/AddTodo';
 import axios from 'axios';
 import TodoList from '../components/TodoList';
+import { notify, SweetIcon } from '../helper/sweetalert';
 
 const url = 'https://634ac3fc5df952851418480f.mockapi.io/api/todos';
 
@@ -23,6 +24,7 @@ const Main = () => {
   const addTodo: AddFn = async (task) => {
     try {
       await axios.post(url, { task, isDone: false });
+      notify("New task added to Umbrella Database", SweetIcon.SUCCESS);
       getTodos();
     } catch (error) {
       console.log(error);
@@ -38,6 +40,17 @@ const Main = () => {
     }
   };
 
+  
+  const deleteTodo: DeleteFn = async (id) => {
+    try {
+      await axios.delete(`${url}/${id}`);
+      notify("Nemesis eliminated task", SweetIcon.SUCCESS);  // Bildirim burada
+      getTodos();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     getTodos();
   }, []);
@@ -46,7 +59,7 @@ const Main = () => {
     <Container>
       <Header />
       <AddTodo addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </Container>
   );
 };
