@@ -44,7 +44,7 @@ const Main = () => {
   const deleteTodo: DeleteFn = async (id) => {
     try {
       await axios.delete(`${url}/${id}`);
-      notify("Nemesis eliminated task", SweetIcon.SUCCESS);  // Bildirim burada
+      notify("Nemesis eliminated task", SweetIcon.SUCCESS);  
       getTodos();
     } catch (error) {
       console.log(error);
