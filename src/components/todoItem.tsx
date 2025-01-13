@@ -18,7 +18,7 @@ const TodoItem: FC<ITodoItem> = ({ todo, toggleTodo, deleteTodo }) => {
         backgroundColor: 'rgba(47, 112, 219, 0.5)',
       }}
       secondaryAction={
-        <IconButton aria-label='comment'>
+        <IconButton aria-label='delete'>
           <DeleteOutline
             sx={{ '&:hover': { color: 'red' } }}
             onClick={() => deleteTodo(todo.id)}
