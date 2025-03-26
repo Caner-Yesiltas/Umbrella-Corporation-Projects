@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Caner-Yesiltas/Sky-Shop/main/assets/Sky-Shop.gif" alt="Sky Shop Demo" width="800"/>
+    <img src="/assets/Umbrella-Projects.gif" alt="Contact App Demo" width="800"/>
 </div>
 
 
